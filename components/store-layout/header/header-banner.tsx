@@ -30,11 +30,11 @@ export default function HeaderBanner() {
     <>
       <div
         // replace `absolute` with `fixed` if you want the banner to be fixed on the page Also Animation will not work if you use `absolute`
-        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ease-in-out ${
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="flex w-full items-center gap-x-6 bg-background px-6 py-3 border-b mb-1 sm:px-3.5 sm:before:flex-1">
+        <div className="bg-background mb-1 flex w-full items-center gap-x-6 border-b px-6 py-3 sm:px-3.5 sm:before:flex-1">
           <div className="flex items-center text-sm font-medium leading-6">
             <p>{`Get 50+ Premium Components for your next project on SyntaxUI`}</p>
 
@@ -48,7 +48,7 @@ export default function HeaderBanner() {
               onClick={() => setIsVisible(false)}
               aria-label="Dismiss"
             >
-              <CloseIcon className="h-5 w-5 text-white" />
+              <CloseIcon className="size-5 text-white" />
             </button>
           </div>
         </div>

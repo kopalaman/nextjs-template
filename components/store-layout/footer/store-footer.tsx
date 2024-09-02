@@ -11,13 +11,13 @@ import Newsletter from "./newsletter"
 
 const FooterSection = ({ title, links }: { title: string; links: any }) => (
   <div>
-    <h2 className="text-base font-semibold mb-4">{title}</h2>
+    <h2 className="mb-4 text-base font-semibold">{title}</h2>
     <ul className="space-y-2">
       {links.map((link: any, index: any) => (
         <li key={index}>
           <Link
             href={link.href}
-            className="hover:text-primary text-muted-foreground  transition-colors text-sm"
+            className="hover:text-primary text-muted-foreground  text-sm transition-colors"
           >
             {link.text}
           </Link>
@@ -81,9 +81,9 @@ const Footer = () => {
   return (
     <footer className="bg-background">
       <div className="container">
-        <div className="max-w-4xl mx-auto  grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-0  mb-8">
-          <div className="inline-block md:flex col-span-2 md:col-span-1">
-            <div className="flex md:flex-col items-center md:items-start justify-between gap-2">
+        <div className="mx-auto mb-8  grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-5  md:gap-0">
+          <div className="col-span-2 inline-block md:col-span-1 md:flex">
+            <div className="flex items-center justify-between gap-2 md:flex-col md:items-start">
               <Link href="/">
                 <Logo />
               </Link>
@@ -98,10 +98,10 @@ const Footer = () => {
             />
           ))}
         </div>
-        <div className="border-t  pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center ">
-            <div className="flex flex-col items-center md:items-start  mb-4 md:mb-0">
-              <span className="text-xs text-muted-foreground mb-1">
+        <div className="mt-8  border-t pt-8">
+          <div className="flex flex-col items-center justify-between md:flex-row ">
+            <div className="mb-4 flex flex-col items-center  md:mb-0 md:items-start">
+              <span className="text-muted-foreground mb-1 text-xs">
                 Follow us on
               </span>
               <div className="space-x-3">
@@ -116,7 +116,7 @@ const Footer = () => {
             </div>
             <Newsletter />
           </div>
-          <div className="text-center md:text-left text-sm text-muted-foreground mt-4">
+          <div className="text-muted-foreground mt-4 text-center text-sm md:text-left">
             <p>&copy; {currentYear} Marliket. All rights reserved.</p>
           </div>
         </div>

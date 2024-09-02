@@ -3,16 +3,16 @@ import { Input } from "@/components/ui/input"
 
 export function Searchbar() {
   return (
-    <div className="flex flex-grow w-full max-w-sm items-center">
+    <div className="flex w-full max-w-sm grow items-center">
       <Input
         type="email"
         placeholder="Search for products..."
-        className="border-r-0 rounded-r-none"
+        className="rounded-r-none border-r-0"
       />
       <Button
         type="submit"
         variant={"outline"}
-        className="border-l-0 rounded-l-none"
+        className="rounded-l-none border-l-0"
       >
         Search...
       </Button>

@@ -9,9 +9,9 @@ export default function StoreHeader() {
   return (
     <>
       {/* <HeaderBanner /> */}
-      <header className="sticky w-full container-fluid z-20 pt-1 flex flex-col">
-        <div className=" flex h-14 items-center justify-between border-b border-muted pb-1">
-          <Logo className="h-12 mr-2" />
+      <header className="container-fluid sticky z-20 flex w-full flex-col pt-1">
+        <div className=" border-muted flex h-14 items-center justify-between border-b pb-1">
+          <Logo className="mr-2 h-12" />
           {/* <Location /> */}
           <Searchbar />
           <Navbar />
