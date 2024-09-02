@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+
 import type { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -7,6 +8,8 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+
+import AuthProviders from "./providers"
 
 export const metadata: Metadata = {
   title: {
@@ -35,13 +38,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
+          <AuthProviders>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <div className="relative flex min-h-screen flex-col">
+                {/* <SiteHeader /> */}
+                <div className="flex-1">{children}</div>
+              </div>
+              <TailwindIndicator />
+            </ThemeProvider>
+          </AuthProviders>
         </body>
       </html>
     </>
